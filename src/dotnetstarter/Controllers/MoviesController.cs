@@ -1,4 +1,6 @@
-﻿using dotnethelloworld.Options;
+﻿using dotnethelloworld.Models;
+using dotnethelloworld.Options;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using System;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace dotnethelloworld.Controllers
 {
-    public class MoviesController
+    public class MoviesController : Controller
     {
         private readonly MyOptions MyOptions;
 
@@ -19,9 +21,13 @@ namespace dotnethelloworld.Controllers
             MyOptions = configuration.Value;
         }
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "<B>Movies</B>" + MyOptions.MyKey;
+            Movie movie = new Movie();
+            movie.Name = "Movie Name " + DateTime.Now;
+            movie.Config = MyOptions.MyKey;
+
+            return View(movie);
         }
     }
 }

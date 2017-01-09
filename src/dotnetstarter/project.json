@@ -3,6 +3,7 @@
         "copyToOutput": {
           "include": [
             "wwwroot",
+            "Views",
             "appsettings.json"
           ]
         },
