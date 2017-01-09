@@ -4,10 +4,10 @@ using Microsoft.Extensions.Configuration;
 
 public class Startup
 {
-	public void Configure(IApplicationBuilder app)
-	{
-		app.UseDefaultFiles();
-		app.UseStaticFiles();
+    public void Configure(IApplicationBuilder app)
+    {
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
     }
 
     public static void Main(string[] args)

@@ -1,5 +1,6 @@
 ---
 applications:
-- name: sample-aspnetcore-helloworld
+- name: YoAspCore
   random-route: true
   memory: 512M
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git
