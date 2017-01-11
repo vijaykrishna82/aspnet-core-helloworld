@@ -18,6 +18,7 @@ public class Startup
         var builder = new ConfigurationBuilder()
             .SetBasePath(env.ContentRootPath)
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .AddEnvironmentVariables()
             .AddCommandLine(Arguments);
 
         Configuration = builder.Build();

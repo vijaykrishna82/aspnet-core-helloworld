@@ -15,3 +15,20 @@ A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 
 [Getting Started]: http://docs.asp.net/en/latest/getting-started/index.html
 [ASP.NET Core buildpack]: https://github.com/cloudfoundry-incubator/dotnet-core-buildpack
+
+## Setting Environment Variables
+
+
+	### On Windows
+		+ Run the following command:
+		`set MyKey=<AnyValue>`
+
+		+ Run `dotnet run`
+
+
+	### On Mac
+
+		+ Run `MyKey=<AnyValue> dotnet run`
+
+
++ Go to http://localhost:5000/Movies. 
