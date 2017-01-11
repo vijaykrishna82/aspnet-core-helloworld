@@ -2,7 +2,6 @@
 
 A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
 
 ## Run the app locally
 
@@ -32,3 +31,14 @@ A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 
 
 + Go to http://localhost:5000/Movies. 
+
+
+## Deploying to Cloud Foundry
+
++ Login to Cloud Foundry `cf login`
++ Change the name of the app <AppName> in manifest.yml
++ Run `cf push`
++ Run `setenv <AppName> MyKey=<AnyValue>`
++ Run `cf restart <AppName>`
++ Find the app url by running `cf app <AppName>`
++ Go to the app url/Movies
